@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نموذج SPIDRK الاحترافي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #0a0a0a;
+      color: white;
+      padding: 2rem;
+    }
+    .container {
+  transition: box-shadow 0.5s ease;
+
+      max-width: 600px;
+      margin: auto;
+      background: #111;
+      padding: 2.5rem;
+      border-radius: 20px;
+      border: 1px solid #333;
+      box-shadow: 0 0 60px rgba(187,51,255,0.2);
+    }
+    .datetime {
+      text-align: center;
+      color: #bb33ff;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ccff, #ff33cc);
+  background-size: 800% 800%;
+  border: 2px solid #bb33ff;
+  border-radius: 16px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  cursor: pointer;
+  animation: buttonNeonMove 8s ease infinite;
+  box-shadow:
+    0 0 12px rgba(255, 51, 204, 0.3),
+    0 0 20px rgba(0, 204, 255, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1);
+}
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ccff, #ff33cc);
+  background-size: 800% 800%;
+  border: 2px solid #bb33ff;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  animation: buttonNeonMove 6s ease infinite;
+  box-shadow:
+    0 0 20px rgba(255, 51, 204, 0.5),
+    0 0 30px rgba(0, 204, 255, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1);
+}
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 30px rgba(204, 102, 255, 0.7),
+    0 0 40px rgba(51, 255, 255, 0.4),
+    inset 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes buttonNeonMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+    .btn span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff33cc, #33ccff, #ccff33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #ff33cc, #33ccff, #ccff33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .icon-animate {
+  width: 22px;
+  height: 22px;
+  animation: iconColorShift 6s infinite ease-in-out;
+  filter: drop-shadow(0 0 3px currentColor);
+}
+
+      animation: iconColorShift 4s infinite ease-in-out;
+      width: 28px;
+      height: 28px;
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+
+    .neon-frame {
+      display: inline-block;
+      padding: 1.2rem 2.5rem;
+      border: 3px solid transparent;
+      border-radius: 22px;
+      animation: neonBorder 5s linear infinite;
+      background: linear-gradient(45deg,
+        #ff33cc, #33ccff, #ccff33, #ff9933, #ff33cc);
+      background-size: 400% 400%;
+      box-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff33cc,
+        0 0 30px #33ccff,
+        0 0 40px #ccff33,
+        0 0 50px #ff9933;
+      margin-top: 2rem;
+      animation: fadeSlideIn 1s ease-out;
+    }
+
+    .spidrk-text {
+  transition: all 0.4s ease-in-out;
+
+      font-size: 3.2rem;
+      font-weight: bold;
+      font-family: 'Cairo', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    @keyframes neonBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes rainbowText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes pulseGlow {
+      from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffaa00; }
+      to { text-shadow: 0 0 20px #ffaa00, 0 0 40px #ffcc00; }
+    }
+    @keyframes iconColorShift {
+      0%   { color: #ff33cc; }
+      25%  { color: #33ccff; }
+      50%  { color: #ccff33; }
+      75%  { color: #ff9933; }
+      100% { color: #ff33cc; }
+    }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="datetime" class="datetime"></div>
+
+    <button class="btn" onclick="location.href='https://forms.gle/1pc4mQ1invvQjquM6'">
+      <svg class="lucide lucide-form-input icon-animate" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"></rect><path d="M3 14h7"></path><path d="M3 18h7"></path><path d="M14 14h7"></path></svg>
+      <span>فتح النموذج</span>
+    </button>
+
+    <button class="btn" onclick="location.href='https://docs.google.com/spreadsheets/d/1_40o73CFIeAegwauu0XS2GY_ItwUG1fyI6_lW6kQKSQ/edit?usp=sharing'">
+      <svg class="lucide lucide-table icon-animate" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>
+      <span>قاعدة البيانات</span>
+    </button>
+
+    <button class="btn" onclick="loadSheetData()">
+      <svg class="lucide lucide-eye icon-animate" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      <span>عرض مباشر للبيانات</span>
+    </button>
+
+    <div id="neonName" style="display:none; text-align:center;"></div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const time = now.toLocaleTimeString('ar-EG');
+      const date = now.toLocaleDateString('ar-EG', options);
+      const dateDiv = document.getElementById("datetime");
+      if (dateDiv) {
+        dateDiv.textContent = "📅 " + date + " 🕒 " + time;
+      }
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    let spidrkState = 0;
+    function loadSheetData() {
+      const target = document.getElementById("neonName");
+      if (!target) return;
+      spidrkState = (spidrkState + 1) % 5;
+      if (spidrkState === 0) {
+        target.style.display = "none";
+        target.innerHTML = "";
+        return;
+      }
+      target.style.display = "block";
+      const baseStart = '<div class="neon-frame"><div class="spidrk-text">';
+      const baseEnd = '</div></div>';
+      const views = [
+        'SPIDRK',
+        '<span style="background:linear-gradient(90deg,#ff00cc,#3333ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:rainbowText 4s ease infinite;">SPIDRK</span>',
+        '<span style="color:#00ffff;text-shadow:0 0 20px #00ffff, 0 0 40px #00ffff;">SPIDRK</span>',
+        '<span style="color:#ffcc00;animation:pulseGlow 2s infinite alternate;">SPIDRK</span>'
+      ];
+      target.innerHTML = baseStart + views[spidrkState - 1] + baseEnd;
+    }
+  </script>
+</body>
+</html>
